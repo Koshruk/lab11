@@ -1,27 +1,25 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 class DataProvider extends ChangeNotifier{
-  int _red = 0;
-  int _green = 0;
-  int _blue = 0;
+  double _redValue = 0.0;
+  double _greenValue = 0.0;
+  double _blueValue = 0.0;
 
-  int get red => _red;
-  set data(value){
-    _red = value;
+  double get redValue => _redValue;
+  set redValue(value){
+    _redValue = value;
     notifyListeners();
   }
 
-  int get green => _green;
-  set green(value){
-    _green = value;
+  double get blueValue => _blueValue;
+  set blueValue(value){
+    _blueValue = value;
     notifyListeners();
   }
 
-  int get blue => _blue;
-  set blue(value){
-    _blue = value;
+  double get greenValue => _greenValue;
+  set greenValue(value){
+    _greenValue = value;
     notifyListeners();
   }
 }

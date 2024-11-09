@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:lab11/providers/data_provider.dart';
 import 'package:provider/provider.dart';
@@ -17,8 +15,10 @@ class _ChangingContainerState extends State<ChangingContainer>{
   Widget build(BuildContext context){
     final provider = Provider.of<DataProvider>(context);
     return Container(
+      width: 150,
+      height: 150,
       decoration: BoxDecoration(
-        color: Color.fromRGBO(provider.red, provider.green, provider.blue, 1),
+        color: Color.fromRGBO(provider.redValue.round(), provider.greenValue.round(), provider.blueValue.round(), 1),
       ),
     );
   }
